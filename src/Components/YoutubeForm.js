@@ -20,7 +20,7 @@ function YoutubeForm() {
                 <input type='email' id='email' name='email' onChange={formik.handleChange} value={formik.values.email} /><br /><br />
                 <label htmlFor='channel'>Channel</label><br />
                 <input type='text' id='channel' name='channel' onChange={formik.handleChange} value={formik.values.channel} /><br /><br />
-                <button>Submit</button>
+                <button type='button'>Submit</button>
 
             </form>
 
