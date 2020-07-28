@@ -27,3 +27,8 @@ Prerequisites
 Installation
 
 npm install formik --save
+
+We also use Yup 
+-- Its for  a validation schema object
+
+npm add yup
