@@ -32,3 +32,19 @@ We also use Yup
 -- Its for  a validation schema object
 
 npm add yup
+
+--   Topics  we learn --
+
+Simple form with three fields 
+useFormik hook
+Managing from state, handling from submission and form validation
+initialValues object + formik.handleChange
+onSubmit method + formik.handleSubmit
+Validate function
+validationSchema oject
+formik.errors and formik.touched
+Formik components:
+  Formik
+  Form
+  Field
+  ErrorMessages
