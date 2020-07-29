@@ -1,6 +1,6 @@
-//we will learn how to add values of form in array
+//we will learn field array in forms in this component
 import React from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage, FieldArray } from 'formik';
 import * as Yup from 'yup';
 import TextError from './TextError';
 
@@ -15,7 +15,8 @@ const initialValues = {
         facebook: '',
         twitter: ''
     },
-    phoneNumbers: ['', '']
+    phoneNumbers: ['', ''],
+    phNumbers: ['']
 }
 
 
@@ -31,7 +32,7 @@ const validationSchema = Yup.object({
 })
 
 
-function FormWithArray() {
+function FormWithFieldArray() {
     return (
         <Formik
             initialValues={initialValues}
@@ -127,9 +128,40 @@ function FormWithArray() {
                         name='phoneNumbers[1]'
                     />
                 </div>
+                <div className='from-control'>
+                    <label>List of phone numbers</label>
+                    <FieldArray name='phNumbers'>
+                        {
+                            (fieldArrayProps) => {
+                                // console.log('fieldArrayProps', fieldArrayProps)
+                                const { push, remove, form } = fieldArrayProps
+                                const { values } = form
+                                const { phNumbers } = values
+                                return (
+                                    <div>
+                                        {phNumbers.map((phNumber, index) => (
+                                            <div key={index}>
+                                                <Field name={`phNumbers[${index}]`} />
+                                                {
+                                                    index > 0 && (
+                                                        <button type='button' onClick={() => remove(index)}>
+                                                            {' '} - {' '}
+                                                        </button>
+                                                    )}
+                                                <button type='button' onClick={() => push('')}>
+                                                    {' '} + {' '}
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )
+                            }
+                        }
+                    </FieldArray>
+                </div>
                 <button type='submit'>Submit</button>
             </Form>
         </Formik>
     )
 }
-export default FormWithArray
+export default FormWithFieldArray

@@ -1,4 +1,4 @@
-//we will learn field render props pattren in this component
+//we will learn how to add values of form in objects
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';

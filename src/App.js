@@ -9,7 +9,9 @@ import './App.css';
 // import FormikComponentAsProp from './Components/FormikComponentAsProp';
 // import FormWithTextArea from './Components/FormWithTextArea';
 // import FormWithNestedObjects from './Components/FormWithNestedObjects';
-import FormWithArray from './Components/FormWithArray';
+// import FormWithArray from './Components/FormWithArray';
+// import FormWithFieldArray from './Components/FormWithFieldArray';
+import FormWithFastField from './Components/FormWithFastField';
 
 
 function App() {
@@ -23,7 +25,9 @@ function App() {
       {/* <FormikComponentAsProp /> */}
       {/* <FormWithTextArea /> */}
       {/* <FormWithNestedObjects /> */}
-      <FormWithArray />
+      {/* <FormWithArray /> */}
+      {/* <FormWithFieldArray /> */}
+      <FormWithFastField />
     </div>
   );
 }
