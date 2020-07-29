@@ -6,7 +6,10 @@ import './App.css';
 // import YoutubeForm from './Components/YoutubeForm';
 // import HoldData from './Components/HoldData';
 // import OldYutubeForm from './Components/OldYoutubeForm';
-import FormikComponentAsProp from './Components/FormikComponentAsProp';
+// import FormikComponentAsProp from './Components/FormikComponentAsProp';
+// import FormWithTextArea from './Components/FormWithTextArea';
+// import FormWithNestedObjects from './Components/FormWithNestedObjects';
+import FormWithArray from './Components/FormWithArray';
 
 
 function App() {
@@ -17,7 +20,10 @@ function App() {
       {/* <ValidationForm /> */}
       {/* <ValidationFormYup /> */}
       {/* <OldYutubeForm /> */}
-      <FormikComponentAsProp />
+      {/* <FormikComponentAsProp /> */}
+      {/* <FormWithTextArea /> */}
+      {/* <FormWithNestedObjects /> */}
+      <FormWithArray />
     </div>
   );
 }
