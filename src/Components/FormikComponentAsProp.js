@@ -12,7 +12,7 @@ const initialValues = {
 
 
 const onSubmit = values => {
-    // console.log('Form data', values);
+    console.log('Form data', values);
 }
 
 
@@ -46,7 +46,9 @@ function FormikComponentAsProp() {
                     <Field type='text' id='channel' name='channel' />
                     <ErrorMessage name='channel' />
                 </div>
-                <button type='submit'>Submit</button>
+                <div>
+                    <button type='submit'>Submit</button>
+                </div>
             </Form>
         </Formik>
     )

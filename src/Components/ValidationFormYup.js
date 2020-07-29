@@ -73,7 +73,7 @@ function ValidationFormYup() {
                     {formik.touched.channel && formik.errors.channel ? <div className='error'>{formik.errors.channel}</div> : null}
                 </div>
 
-                <button >Submit</button>
+                <button type='submit'>Submit</button>
             </form>
         </div>
     )

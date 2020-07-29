@@ -11,7 +11,7 @@ const initialValues = {
 
 
 const onSubmit = values => {
-    // console.log('Form data', values);
+    console.log('Form data', values);
 }
 
 
@@ -87,7 +87,7 @@ function ValidationForm() {
                     {formik.touched.channel && formik.errors.channel ? <div className='error'>{formik.errors.channel}</div> : null}
                 </div>
 
-                <button >Submit</button>
+                <button type='submit'>Submit</button>
             </form>
         </div>
     )

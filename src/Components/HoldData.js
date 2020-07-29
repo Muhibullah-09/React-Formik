@@ -24,7 +24,7 @@ function HoldData() {
                 <label htmlFor='channel'>Channel</label><br />
                 <input type='text' id='channel' name='channel' onChange={formik.handleChange} value={formik.values.channel} /><br /><br />
 
-                <button >Submit</button>
+                <button type='submit'>Submit</button>
             </form>
         </div>
     )

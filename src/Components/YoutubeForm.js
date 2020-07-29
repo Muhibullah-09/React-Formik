@@ -21,9 +21,7 @@ function YoutubeForm() {
                 <label htmlFor='channel'>Channel</label><br />
                 <input type='text' id='channel' name='channel' onChange={formik.handleChange} value={formik.values.channel} /><br /><br />
                 <button type='button'>Submit</button>
-
             </form>
-
         </div>
     )
 }
