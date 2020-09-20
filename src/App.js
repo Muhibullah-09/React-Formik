@@ -11,7 +11,10 @@ import './App.css';
 // import FormWithNestedObjects from './Components/FormWithNestedObjects';
 // import FormWithArray from './Components/FormWithArray';
 // import FormWithFieldArray from './Components/FormWithFieldArray';
-import FormWithFastField from './Components/FormWithFastField';
+// import FormWithFastField from './Components/FormWithFastField';
+// import FormValidation from './Components/FormValidation';
+// import HandleFormOnSubmit from './Components/HandleFormOnSubmit';
+import FieldLevelValidation from './Components/FieldLevelValidation';
 
 
 function App() {
@@ -27,7 +30,11 @@ function App() {
       {/* <FormWithNestedObjects /> */}
       {/* <FormWithArray /> */}
       {/* <FormWithFieldArray /> */}
-      <FormWithFastField />
+      {/* <FormWithFastField /> */}
+      {/* <DisableSubmitButton/> */}
+      {/* <FormValidation/> */}
+      {/* <HandleFormOnSubmit/> */}
+      <FieldLevelValidation/>
     </div>
   );
 }

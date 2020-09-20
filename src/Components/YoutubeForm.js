@@ -1,4 +1,3 @@
-//Simple form with managing data
 import React from 'react'
 import { useFormik } from 'formik';
 function YoutubeForm() {
