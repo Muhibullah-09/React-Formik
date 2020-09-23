@@ -14,7 +14,9 @@ import './App.css';
 // import FormWithFastField from './Components/FormWithFastField';
 // import FormValidation from './Components/FormValidation';
 // import HandleFormOnSubmit from './Components/HandleFormOnSubmit';
-import FieldLevelValidation from './Components/FieldLevelValidation';
+// import FieldLevelValidation from './Components/FieldLevelValidation';
+// import FormManualValidation from './Components/FormManualValidation';
+import DisableSubmitButton1 from './Components/DisableSubmitButton1';
 
 
 function App() {
@@ -34,7 +36,9 @@ function App() {
       {/* <DisableSubmitButton/> */}
       {/* <FormValidation/> */}
       {/* <HandleFormOnSubmit/> */}
-      <FieldLevelValidation/>
+      {/* <FieldLevelValidation/> */}
+      {/* <FormManualValidation/> */}
+      <DisableSubmitButton1/>
     </div>
   );
 }

@@ -46,8 +46,6 @@ function FieldLevelValidation() {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}
-            validateOnChange={false}
-            validateOnBlur={false}
         >
             <Form>
                 <div className='form-control'>
@@ -68,6 +66,7 @@ function FieldLevelValidation() {
                 <div className='form-control'>
                     <label htmlFor='comments'>Comments</label>
                     <Field as='textarea' id='comments' name='comments' placeholder='Enter Your Comments' validate={validateComment}/>
+                    <ErrorMessage name='comments' component={TextError}/>
                 </div>
                 <div className='form-control'>
                     <label htmlFor='address'>Address</label>
@@ -138,4 +137,4 @@ function FieldLevelValidation() {
         </Formik>
     )
 }
-export default FieldLevelValidation
+export default FieldLevelValidation;
