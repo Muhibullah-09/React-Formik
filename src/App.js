@@ -16,7 +16,12 @@ import './App.css';
 // import HandleFormOnSubmit from './Components/HandleFormOnSubmit';
 // import FieldLevelValidation from './Components/FieldLevelValidation';
 // import FormManualValidation from './Components/FormManualValidation';
-import DisableSubmitButton1 from './Components/DisableSubmitButton1';
+// import DisableSubmitButton1 from './Components/DisableSubmitButton1';
+// import DisableSubmitButton2 from './Components/DisableSubmitButton2';
+// import LoadSavedData from './Components/LoadSavedData';
+// import ResetFormData from './Components/ResetFormData';
+import FormikContainer from './Components/ReuseableFormikControls/FormikContainer';
+
 
 
 function App() {
@@ -38,7 +43,11 @@ function App() {
       {/* <HandleFormOnSubmit/> */}
       {/* <FieldLevelValidation/> */}
       {/* <FormManualValidation/> */}
-      <DisableSubmitButton1/>
+      {/* <DisableSubmitButton1/> */}
+      {/* <DisableSubmitButton2/> */}
+      {/* <LoadSavedData/> */}
+      {/* <ResetFormData/> */}
+      <FormikContainer/>
     </div>
   );
 }

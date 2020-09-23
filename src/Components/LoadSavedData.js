@@ -2,6 +2,7 @@ import React from 'react'
 import { Formik, Form, Field, ErrorMessage, FieldArray, FastField } from 'formik';
 import * as Yup from 'yup';
 import TextError from './TextError';
+import { useState } from 'react';
 
 const initialValues = {
     name: '',
@@ -15,12 +16,29 @@ const initialValues = {
     },
     phoneNumbers: ['', ''],
     phNumbers: ['']
-}
+};
 
 
-const onSubmit = values => {
+const SavedValues = {
+    name: 'Kamali',
+    email: 'K@abc.com',
+    channel: 'KamTech',
+    comments: 'Welcome to Formik',
+    address: 'Flat 202/A',
+    social: {
+        facebook: '',
+        twitter: ''
+    },
+    phoneNumbers: ['', ''],
+    phNumbers: ['']
+};
+
+
+const onSubmit = (values , onSubmitProps) => {
     console.log('Form data', values);
-}
+    console.log('Submit Props' ,onSubmitProps)
+    onSubmitProps.setSubmitting(false);
+};
 
 
 const validationSchema = Yup.object({
@@ -28,7 +46,7 @@ const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format!').required('Required!'),
     channel: Yup.string().required('Required!'),
     comments: Yup.string().required('Required')
-})
+});
 
 
 const validateComment = value => {
@@ -40,13 +58,15 @@ const validateComment = value => {
 }
 
 
-function DisableSubmitButton1() {
+function LoadSavedData() {
+    const [ formValues , setFormValues ] = useState(null);
     return (
         <Formik
-            initialValues={initialValues}
+            initialValues={formValues || initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}
-            validateOnMount
+            enableReinitialize
+            // validateOnMount
         >
             {
                 formik => {
@@ -137,7 +157,8 @@ function DisableSubmitButton1() {
                                     }
                                 </FieldArray>
                             </div>
-                            <button type='submit' disabled={!(formik.dirty && formik.isValid)}>Submit</button>
+                            <button type='submit' onClick={() => setFormValues(SavedValues)}>Load Saved Data</button>
+                            <button type='submit' disabled={!formik.isValid || formik.isSubmitting}>Submit</button>
                         </Form>
 
                     )
@@ -146,4 +167,4 @@ function DisableSubmitButton1() {
         </Formik>
     )
 }
-export default DisableSubmitButton1;
+export default LoadSavedData;

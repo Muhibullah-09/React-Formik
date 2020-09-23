@@ -15,12 +15,14 @@ const initialValues = {
     },
     phoneNumbers: ['', ''],
     phNumbers: ['']
-}
+};
 
 
-const onSubmit = values => {
+const onSubmit = (values , onSubmitProps) => {
     console.log('Form data', values);
-}
+    console.log('Submit Props' ,onSubmitProps)
+    onSubmitProps.setSubmitting(false);
+};
 
 
 const validationSchema = Yup.object({
@@ -28,7 +30,7 @@ const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format!').required('Required!'),
     channel: Yup.string().required('Required!'),
     comments: Yup.string().required('Required')
-})
+});
 
 
 const validateComment = value => {
@@ -40,13 +42,13 @@ const validateComment = value => {
 }
 
 
-function DisableSubmitButton1() {
+function DisableSubmitButton2() {
     return (
         <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}
-            validateOnMount
+            // validateOnMount
         >
             {
                 formik => {
@@ -137,7 +139,7 @@ function DisableSubmitButton1() {
                                     }
                                 </FieldArray>
                             </div>
-                            <button type='submit' disabled={!(formik.dirty && formik.isValid)}>Submit</button>
+                            <button type='submit' disabled={!formik.isValid || formik.isSubmitting}>Submit</button>
                         </Form>
 
                     )
@@ -146,4 +148,4 @@ function DisableSubmitButton1() {
         </Formik>
     )
 }
-export default DisableSubmitButton1;
+export default DisableSubmitButton2;
