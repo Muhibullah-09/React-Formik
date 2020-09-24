@@ -1,4 +1,5 @@
 import React from 'react'
+import CheckBox from './CheckBox';
 import Input from './Input'
 import RadioButtons from './RadioButtons'
 import Select from './Select'
@@ -16,6 +17,7 @@ function FormikControl(props) {
         case 'radio':
             return <RadioButtons {...rest} />
         case 'checkbox':
+            return <CheckBox {...rest} />
         case 'date':
         default: return null
     }
